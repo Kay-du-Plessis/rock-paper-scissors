@@ -1,28 +1,34 @@
-//prompt user for selection
-let userSelect = prompt("Rock, Paper or Scissors", "rock")
+
 
 //function computerPlay that returns rock, paper or scissors. This will be the 
 //value computerSelection
 
-let choice = ["rock", "paper", "scissors"]
 
 function computerPlay() {
-        let random = Math.floor(Math.random() * choice.length);
-        return (choice[random])
-    }
-const computerSelect = computerPlay();
+    let choice = ["rock", "paper", "scissors"]
+    let random = Math.floor(Math.random() * choice.length);
+    return (choice[random])
+}
 
+function getUserSelect () {
+    let userSelect = prompt("Rock, Paper or Scissors?", "rock");
+    userSelect.toLowerCase(); 
+    return userSelect;
+}
 //function for the round that takes two case insensitive parameters, playerSelection and
 //computerSelection.
 
 function playRound (computerSelect, userSelect) {
+    console.log(computerSelect)
+//prompt user for selection
+
     if (
         (computerSelect == "rock" && userSelect == "scissors") ||
         (computerSelect == "scissors" && userSelect == "paper") ||
         (computerSelect == "paper" && userSelect == "rock")
         ) {
-            console.log("You lose this round.");
-            return computerScore = +1;
+            console.log("You lose this round, " + computerSelect + " beats " + userSelect);
+            return computerScore =  +1;
     }
 
     else if (
@@ -30,19 +36,32 @@ function playRound (computerSelect, userSelect) {
         (userSelect == "scissors" && computerSelect == "paper") ||
         (userSelect == "paper" && computerSelect == "rock")
         ) {
-            console.log("You win this round! ");
+            console.log("You win this round, " + userSelect + " beats " + computerSelect);
             return userScore = +1;
     }
 
     else {
-        console.log("Tie!")
+        console.log("Tie!");
     }
 }
 
 //game function that makes a five round game and keeps score. Call previous functions
 //into this one.
 
-function playGame () {
-    playRound 5 Timess
-    
+function score(userScore, computerScore) {
+    userScore = +1;
+    computerScore = +1;
+    console.log(userScore, computerScore);
 }
+
+function playGame () {
+    for (let i = 0; i < 5; i++) {
+        playRound(computerPlay(), getUserSelect())
+        score(userScore, computerScore)
+    }
+    
+
+}
+
+
+playGame()
