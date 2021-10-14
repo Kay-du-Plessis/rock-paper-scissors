@@ -28,40 +28,63 @@ function playRound (computerSelect, userSelect) {
         (computerSelect == "paper" && userSelect == "rock")
         ) {
             console.log("You lose this round, " + computerSelect + " beats " + userSelect);
-            return computerScore =  +1;
-    }
-
+            return result = "Lose";
+}
     else if (
         (userSelect == "rock" && computerSelect == "scissors") ||
         (userSelect == "scissors" && computerSelect == "paper") ||
         (userSelect == "paper" && computerSelect == "rock")
         ) {
             console.log("You win this round, " + userSelect + " beats " + computerSelect);
-            return userScore = +1;
+            return result = "Win";
     }
 
     else {
         console.log("Tie!");
+        return result = "Tie"
     }
 }
 
 //game function that makes a five round game and keeps score. Call previous functions
 //into this one.
 
-function score(userScore, computerScore) {
-    userScore = +1;
-    computerScore = +1;
-    console.log(userScore, computerScore);
-}
 
 function playGame () {
-    for (let i = 0; i < 5; i++) {
-        playRound(computerPlay(), getUserSelect())
-        score(userScore, computerScore)
-    }
+    let gamesPlayed = 0;
+        let userScore = 0;
+        let computerScore = 0;
     
+    for (let i = 0; i < 5; i++) {
+        
+        let totalScore = playRound(computerPlay(), getUserSelect());
+        if (result == "Win") {
+            userScore += 1;
+            gamesPlayed +=1;
+            console.log(userScore, computerScore);
+        }
 
+        else if (result == "Lose") {
+             computerScore += 1;
+             gamesPlayed +=1;
+            console.log(userScore, computerScore);
+            }
+        
+        else if (result == "Tie") {
+            computerScore += 0;
+            userScore += 0;
+            console.log(userScore, computerScore);
+        }
+    }  
+    
+    if (userScore > computerScore) {
+        console.log("You did it! You win!")
+    }
+
+    else if (userScore == computerScore) {
+        console.log("Tie! Try again to win")
+    }
+
+    else 
+        console.log("You lost. Try again.")
 }
-
-
 playGame()
