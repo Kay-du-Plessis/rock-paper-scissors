@@ -1,7 +1,22 @@
+const compScore_span = document.getElementById("compScore");
+const userScore_span = document.getElementById("userScore");
+const scoreDiv_div = document.querySelector(".scoreDiv");
+const result_div = document.querySelector(".result");
+const rockButton = document.getElementById("r");
+const paperButton = document.getElementById("p");
+const scissorsButton = document.getElementById("s");
 
+rockButton.addEventListener('click', function() {
+    playRound("rock");
+})
 
-//function computerPlay that returns rock, paper or scissors. This will be the 
-//value computerSelection
+paperButton.addEventListener('click', function() {
+    playRound("paper");
+})
+
+scissorsButton.addEventListener('click', function() {
+    playRound("scissors");
+})
 
 
 function computerPlay() {
@@ -10,17 +25,12 @@ function computerPlay() {
     return (choice[random])
 }
 
-function getUserSelect () {
-    let userSelect = prompt("Rock, Paper or Scissors?", "rock");
-    userSelect.toLowerCase(); 
-    return userSelect;
-}
 //function for the round that takes two case insensitive parameters, playerSelection and
 //computerSelection.
 
-function playRound (computerSelect, userSelect) {
-    console.log(computerSelect)
-//prompt user for selection
+function playRound (userSelect) {
+    const computerSelect= computerPlay();
+    console.log(computerSelect);
 
     if (
         (computerSelect == "rock" && userSelect == "scissors") ||
@@ -43,7 +53,7 @@ function playRound (computerSelect, userSelect) {
         console.log("Tie!");
         return result = "Tie"
     }
-}
+}  
 
 //game function that makes a five round game and keeps score. Call previous functions
 //into this one.
@@ -56,7 +66,7 @@ function playGame () {
     
     for (let i = 0; i < 5; i++) {
         
-        let totalScore = playRound(computerPlay(), getUserSelect());
+        let totalScore = playRound(computerPlay(), userSelect());
         if (result == "Win") {
             userScore += 1;
             gamesPlayed +=1;

@@ -7,40 +7,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Tenor+Sans&display=swap" rel="stylesheet">
-    <a href="https://lh3.googleusercontent.com/DKcVghL3vjFDP_ORnLDDoeDXjZl2B51f-HDqhifzLSdTbXZTV7eDS7i66vEm5Vbe1pNC8YwKU-OU2PyXvnPayobAx4aP2NRJA8GEKxNklfs4nQ_etQLiOmCUHh0TlbXiTbie7znurg=w2400?source=screenshot.guru"></a>
-    <a href="https://lh3.googleusercontent.com/Rt-rWE1KcIQuFagR9FX8PVufAymriNORCqQ8fYqmoA9HdFBMBSw2RHeZRVID2XVoNHvq2MQopirF62knPkkRrkxY4uGl9SJZfFYD01oZlrXRoH6JRSNPMsa99wyDtgza4ZlVWeoR6A=w2400?source=screenshot.guru"></a>
-    <a href="https://lh3.googleusercontent.com/qJCw4qF1m6_-FkRw9PmW57DMN_KjQ3PgLnbMZm4S15O6xv6UjuzMb3uTyJigPF9HC6eUPj6WQx6n4B9JtyCgJzrHa7dbygdwn6Q-dGoHrr5I6jvhX1At1b6Dz3QZeRqyIiQsvOGQxg=w2400?source=screenshot.guru"></a>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+
 </head>
 <body>
-    <script src = "script.js"></script>
     <div id = "heading">
         <h1>Rock Paper Scissors</h1>
     </div>
     
     <div id = 'scoreDiv'>
-        <div class="scoreName" id="userScore">Your Score</div>
-        <div class="scoreName" id="compScore">CPU Score</div>
+        <div class="scoreName" id="user">Your Score</div>
+        <div class="scoreName" id="comp">CPU Score</div>
+        <span id="userScore">0</span>:<span id="compScore">0</span>
     </div>
 
     <p class="result">You X! X beats X.</p>
 
-
     <div class="selectors">
-        <div class = "image">
-            <img src="https://lh3.googleusercontent.com/DKcVghL3vjFDP_ORnLDDoeDXjZl2B51f-HDqhifzLSdTbXZTV7eDS7i66vEm5Vbe1pNC8YwKU-OU2PyXvnPayobAx4aP2NRJA8GEKxNklfs4nQ_etQLiOmCUHh0TlbXiTbie7znurg=w344-h240-p-k" alt = "A cartoon  picture of rock"/>
+        <div class = "button" id="r">
+            <input type="image" class="select" src="https://img.icons8.com/ios/50/000000/hand-rock.png"/>
         </div>
-        
-        <div class = "image">
-            <img src="https://lh3.googleusercontent.com/Rt-rWE1KcIQuFagR9FX8PVufAymriNORCqQ8fYqmoA9HdFBMBSw2RHeZRVID2XVoNHvq2MQopirF62knPkkRrkxY4uGl9SJZfFYD01oZlrXRoH6JRSNPMsa99wyDtgza4ZlVWeoR6A=w512-h315-p-k" alt = "A cartoon  picture of paper"/> 
+        <div class = "button" id="p">
+            <input type="image" class="select" src="https://img.icons8.com/ios/50/000000/hand.png"/>
         </div>
-        
-        <div class = "image">
-            <img src="https://lh3.googleusercontent.com/qJCw4qF1m6_-FkRw9PmW57DMN_KjQ3PgLnbMZm4S15O6xv6UjuzMb3uTyJigPF9HC6eUPj6WQx6n4B9JtyCgJzrHa7dbygdwn6Q-dGoHrr5I6jvhX1At1b6Dz3QZeRqyIiQsvOGQxg=w512-h315-p-k" alt = "A cartoon  picture of scissors"/>
+        <div class = "button" id="s">
+            <input type="image" class="select" src="https://img.icons8.com/ios/50/000000/hand-scissors.png"/>
         </div>
     </div>
     
     <div id  = "finalResult">
         <h2>You x!</h2>
     </div>
+
+    <script src = "script.js"></script>
 </body>
 </html>
