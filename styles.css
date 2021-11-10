@@ -13,10 +13,18 @@
     font-size: 30px;
 }
 
+
 body {
     background-color: #fdf2ed;    
     color: #50514f;
     font-family: 'Tenor Sans', sans-serif;
+}
+
+p {
+    background-color: #fdf2ed;    
+    color: #50514f;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
 }
 
 #scoreDiv {
@@ -24,7 +32,7 @@ body {
     border: 3px solid #FFD5C2;
     border-radius: 10px;
     color: #FFFFFF;
-    width: 300px;
+    width: 150px;
     padding: 15px 20px;
     font-size: 30px;
     position: relative;
@@ -39,17 +47,33 @@ body {
 
 #user {
     position: absolute;
-    top: -20px;
-    left: 20px;
+    top: -25px;
+    left: 25px;
 }
 
 #comp {
     position: absolute;
-    top: -20px;
+    top: 95px;
     right: 20px;
 }
+span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #50514f;
+}
 
+#userPoints  {
+    display: flex;
+    color: #50514f;
+    text-align: center;
+}
 
+#compPoints {
+    display: flex;
+    color: #50514f;
+    text-align: center;
+}
 
 .result {
     font-size: 25px;
