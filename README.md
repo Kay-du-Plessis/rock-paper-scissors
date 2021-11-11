@@ -12,4 +12,4 @@ Learnt how to use code written for the console in my webpage and connect it with
 Learnt how to use event listeners.
 Learnt how to cache the DOM.
 Learnt how to pass variables between functions.
-Learnt JS isnt that scary :)
+Learnt JS isnt that scary :).
